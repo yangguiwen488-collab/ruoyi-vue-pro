@@ -57,6 +57,10 @@ public interface ErrorCodeConstants {
     ErrorCode DATA_SOURCE_CONFIG_NOT_EXISTS = new ErrorCode(1_001_007_000, "数据源配置不存在");
     ErrorCode DATA_SOURCE_CONFIG_NOT_OK = new ErrorCode(1_001_007_001, "数据源配置不正确，无法进行连接");
 
+    // ========== Redis 配置 1-001-008-000 ==========
+    ErrorCode REDIS_CONFIG_NOT_EXISTS = new ErrorCode(1_001_008_000, "Redis 配置不存在");
+    ErrorCode REDIS_CONFIG_NOT_OK = new ErrorCode(1_001_008_001, "Redis 配置不正确，无法进行连接");
+
     // ========== 学生 1-001-201-000 ==========
     ErrorCode DEMO01_CONTACT_NOT_EXISTS = new ErrorCode(1_001_201_000, "示例联系人不存在");
     ErrorCode DEMO02_CATEGORY_NOT_EXISTS = new ErrorCode(1_001_201_001, "示例分类不存在");

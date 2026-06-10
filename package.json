@@ -1,0 +1,9 @@
+{
+  "name": "ruoyi-vue-pro",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix yudao-ui/yudao-ui-admin-vue3-app run dev",
+    "build": "npm --prefix yudao-ui/yudao-ui-admin-vue3-app run build",
+    "install:ui": "npm --prefix yudao-ui/yudao-ui-admin-vue3-app install"
+  }
+}

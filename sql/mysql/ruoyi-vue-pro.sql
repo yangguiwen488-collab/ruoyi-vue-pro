@@ -236,6 +236,32 @@ BEGIN;
 COMMIT;
 
 -- ----------------------------
+-- Table structure for infra_redis_config
+-- ----------------------------
+DROP TABLE IF EXISTS `infra_redis_config`;
+CREATE TABLE `infra_redis_config`  (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键编号',
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '连接名称',
+  `host` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Redis 主机地址',
+  `port` int NOT NULL DEFAULT 6379 COMMENT 'Redis 端口',
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '密码(加密存储)',
+  `database` int NOT NULL DEFAULT 0 COMMENT '数据库索引(0-15)',
+  `timeout` int NOT NULL DEFAULT 5000 COMMENT '连接超时(毫秒)',
+  `creator` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT '' COMMENT '创建者',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updater` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT '' COMMENT '更新者',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `deleted` bit(1) NOT NULL DEFAULT b'0' COMMENT '是否删除',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = 'Redis 配置表';
+
+-- ----------------------------
+-- Records of infra_redis_config
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for infra_file
 -- ----------------------------
 DROP TABLE IF EXISTS `infra_file`;
